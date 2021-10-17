@@ -148,7 +148,7 @@
 ^#!P::Run, https://photos.google.com/?pli=1
 ```
 
-- ### 4.Text Replacement
+- ### Text Replacement
 
 ```ahk
 4.Text Replacement
