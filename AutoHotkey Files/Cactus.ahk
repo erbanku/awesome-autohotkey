@@ -1,20 +1,8 @@
-﻿; Recommended for performance and compatibility with future AutoHotkey releases.
-; #Warn  ; Enable warnings to assist with detecting common errors.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+﻿;1.Open folders
 
+^#G::Run, C:\Users\%USERPROFILE%\Documents\GitHub
 
-;0.运行脚本
-
-
-^+W::Run, "D:\OneDrive\Apps\FreeFileSync\批处理命令【谨慎操作】\【更新】WeChat文件目录同步到OneDrive Wechat Files目录.ffs_batch"
-
-
-;1.打开文件夹
-
-^#G::Run, C:\Users\Erban Ku\Documents\GitHub
-
-#E::Run, "C:\Users\Erban Ku\Downloads"
+#E::Run, "C:\Users\%USERPROFILE%\Downloads"
 
 ^!V::Run, "D:\OneDrive\OneDrive Files\Personal Vault.lnk"
 
@@ -31,7 +19,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^!K::Run, D:\OneDrive\Apps\AutoHotkey
 
-^!S::Run, C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+^!S::Run, C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 ^!M::Run, "D:\OneDrive\Pictures\Screenshots\Markdown Notes\Passwords.md"  ;Open Passwords.md File
 
@@ -39,22 +27,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ;#M::Run, D:\OneDrive\onedrive files\musics\Windows 11 Music Library
 
 
-;2.打开应用
-
+;2.Open Applications
 #F1::Run, "C:\DO NOT DELETE\Microsoft Store.lnk"
 #F2::Run, "C:\DO NOT DELETE\Calendar.lnk"
 #F3::Run, "C:\DO NOT DELETE\To Do.lnk"
 #F4::Run, "C:\DO NOT DELETE\Notes.lnk"
 
-;打开弹幕背单词应用DWords
-^#!D::Run, "C:\DO NOT DELETE\DWords.lnk"
-;打开Everything进行搜索
-#+S::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Everything 1.5a.lnk"
-#!F2::Run, "C:\Users\Erban Ku\Desktop\IDM.lnk"
+#!F2::Run, "C:\Users\%USERPROFILE%\Desktop\IDM.lnk"
 
 #!T::Run, "C:\DO NOT DELETE\Typora.lnk"
 #G::Run, "C:\DO NOT DELETE\Clock.lnk"
-^#!G::Run, "C:\Users\Erban Ku\Desktop\GitHub Desktop.lnk"
+^#!G::Run, "C:\Users\%USERPROFILE%\Desktop\GitHub Desktop.lnk"
 ^#!B::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Bandizip\Bandizip.lnk"
 #!Ins::Run, "C:\DO NOT DELETE\Speedtest.lnk"
 
@@ -64,103 +47,111 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #!E::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Excel.lnk"
 #!P::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PowerPoint.lnk"
 
-;Create New Google Docs Documents
-
-#!,::Run, https://doc.new
-#!.::Run, https://sheet.new
-#!/::Run, https://slide.new
-
-;TEMP DISABLED
-;#!;::Run, https://site.new
-
 #F::Run, "C:\Program Files\FreeFileSync\FreeFileSync.exe"
 #C::Run, Chrome
 !N::Run, Notepad
-#!C::Run, "C:\Users\Erban Ku\Desktop\VS Code.lnk"
+#!C::Run, "C:\Users\%USERPROFILE%\Desktop\VS Code.lnk"
 
-#Q::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows Terminal.lnk"
+#Q::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Windows Terminal.lnk"
 ;TEMPORARY DISABLED
-;#Q::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Command Prompt.lnk"
+;#Q::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\System Tools\Command Prompt.lnk"
 
 
 ^!L::Run, "C:\Program Files (x86)\Lenovo\PCManager\4.0.10.9272\LenovoPcManager.exe"
 ^+#A::Run, "C:\Program Files (x86)\Lenovo\PCManager\4.0.10.9272\LenovoAppStore.exe"
 
-#`::Run,"C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ShareX.lnk"
-!E::Run, "C:\Program Files (x86)\ExpressVPN\expressvpn-ui\ExpressVPN.exe"
+#`::Run,"C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\ShareX.lnk"
 !W::Run, "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
 #!G::Run, "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Google Drive.lnk"
 
 
-!T::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Telegram WebK.lnk"
-#T::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Twitter.lnk"
-#!O::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\OneDrive.lnk"
-!Y::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\YouTube.lnk"
-#Y::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Yandex.Mail.lnk"
-!H::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Hole.lnk"
-#!L::Run, "C:\Users\Erban Ku\Desktop\Learn Helper.lnk"
-^!I::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Ithome.lnk"
-^!R::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Today.lnk"
+!T::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Telegram WebK.lnk"
+#T::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Twitter.lnk"
+#!O::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\OneDrive.lnk"
+!Y::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\YouTube.lnk"
+#Y::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Yandex.Mail.lnk"
+!H::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Hole.lnk"
+#!L::Run, "C:\Users\%USERPROFILE%\Desktop\Learn Helper.lnk"
+^!I::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Ithome.lnk"
+^!R::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\Today.lnk"
 
 
 ^!T::Run, "C:\DO NOT DELETE\TG Auto Delete All Messages.lnk"
-#+T::Run, "C:\Users\Erban Ku\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\TweetDelete.lnk"
+#+T::Run, "C:\Users\%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Chrome Apps\TweetDelete.lnk"
 !L::Run, "D:\OneDrive\OneDrive Files\LT Archives\2021-2022-1\LT Archives Grabber (2021-2022-1).exe.lnk"
 
 ^!#S::Run,"D:\OneDrive\Apps\AutoHotkey\System Timer.ahk"
 
 
-;3.打开网页
-
-;Ctrl+Shift+鼠标左键打开剪贴板里的网页
+;3.Open Webpages in browser
+;Ctrl+Shift+LButton to open website copied to pastboard
 ^+LButton::Run, %clipboard%
 
-;清华洗衣机状态查询
-^#!X::Run, https://washer.sdevs.top/
-
-;DeepL翻译
-
+;DeepL Translate
+;Open DeepL Translate in browser and Translate the clipboard text to Simplified Chinese
 ^#!C::Run, https://www.deepl.com/zh/translator#en/zh/%clipboard%
+;Open DeepL Translate in browser and Translate the clipboard text to English
 ^#!E::Run, https://www.deepl.com/zh/translator#zh/en/%clipboard%
 
 ;Google
-
-;打开Google
+;Open Google(ncr=NotCountryRedirect)
 #space::Run https://www.google.com/ncr
-;用Google搜索剪切板的内容
+
+;Search clipboard texts with Google
 !space:: Run https://www.google.com/search?q=%clipboard%
 
-^!C::Run, https://cloud.tsinghua.edu.cn
-^!G::Run, https://github.com/erbanku?tab=stars
+;Create New Google Docs Documents
+
+#!,::Run, https://doc.new
+#!.::Run, https://sheet.new
+#!/::Run, https://slide.new
+;TEMPORARY DISABLED
+;#!;::Run, https://site.new
+
+^!G::Run, https://github.com/
 #!M::Run, https://www.multcloud.com/mc_project/task_list
-#!6::Run, https://www.youtube.com/channel/UCjHZB7VNA_z_50pDI5EuWNQ
+
+;Open specific Youtuber's Channel page.(You can customize the target channel by changing the channle URL address below)
+#!6::Run, https://www.youtube.com/channel/UCyOfqgtsQaM3S-VZnsYnHjQ
+
 #!I::Run, https://www.instagram.com/
+
 #!K::Run, https://keep.google.com/
+
 #!V::Run, https://voice.google.com/u/0/messages
+
 #!D::Run, https://drive.google.com/drive/my-drive
+
 #!A::Run, https://www.icloud.com/
 
 ^#!W::Run, https://chrome.google.com/webstore/category/extensions
+
 ^#!P::Run, https://photos.google.com/?pli=1
 
-;打开Short.io管理短链接页面
-^#Ins::Run, https://app.short.io/users/dashboard/256108/links
 
-;4.文本替代
+4.Text Replacement
+;a.Insert date-time
 
-;a.输入时间
+;Insert current time in standard US date-time format
 ::ustime::
 SendInput %A_MM%/%A_DD%/%A_YYYY% %A_Hour%:%A_Min%:%A_Sec%
 return
+
+;Insert current time in standard China date-time format
 ::ctime::
 SendInput %A_YYYY%-%A_MM%-%A_DD% %A_Hour%:%A_Min%:%A_Sec%
 return
+;Insert current time in standard China local date-time format
 ::cntime::
 SendInput %A_YYYY%年%A_MM%月%A_DD%日 %A_Hour%时%A_Min%分%A_Sec%秒
 return
 
-
-;b.个人常用文本快速输入
+;b.Quick personal text input
+/*
+Such as:    ::pip::pip install
+it can auto convert "pip" to "pip install" 
+You can customize it by yourself if you need
+*/
 
 ::e.com::erbanku.com/
 ::pip::pip install
@@ -171,9 +162,9 @@ return
 ::pytoexe::auto-py-to-exe
 
 
-;5.系统便捷功能
+;5.System Utilities
 
-;a.显示隐藏桌面图标（Win+Z）
+;a.Hide/Show Desktop icons（Win+Z）
 
 #Z::
 ControlGet, HWND, Hwnd,, SysListView321, ahk_class Progman
@@ -186,13 +177,13 @@ WinShow, ahk_id %HWND%
 Return
 
 
-;b.虚拟桌面之间切换（Win+Arrow Keys）
+;b.Switch between virtual Desktops（Cterl+Win+ Left-Right Arrow Keys）
 
 ;#Right::^#Right ; switch to next desktop with Windows key + Right arrow key
 ;#Left::^#Left ; switch to next desktop with Windows key + Left arrow key
 
 
-;c.显示/隐藏状态栏（Win+Alt+Z）
+;c.Show/Hide Taskbar（Win+Alt+Z）
 
 $#!Z:: HideShowTaskbar(hide := !hide)
 HideShowTaskbar(action) {
@@ -204,7 +195,7 @@ HideShowTaskbar(action) {
 }
 
 
-;d.窗口置顶
+;d.Pin the Current Window on Top
 
 +Enter:: 
     WinGet ow, id, A
@@ -216,9 +207,9 @@ WinTopToggle(w) {
     Winset, AlwaysOnTop, Toggle, ahk_id %w%
     WinGet, ExStyle, ExStyle, ahk_id %w%
     if (ExStyle & 0x8)  ; 0x8 为 WS_EX_TOPMOST.在WinGet的帮助中
-        oTop = 置顶
+        oTop = Pinned
     else
-        oTop = 取消置顶
+        oTop = Pin Canceled
     tooltip %oTitle% %oTop%
     SetTimer, RemoveToolTip, 5000
     return
@@ -230,13 +221,13 @@ WinTopToggle(w) {
 }
 
 
-;e.Win+鼠标上下滚动增/减音量
+;e.Change system volume with "Win+ Mouse wheel(Roll Up/Down)"
 
 #WheelUp::Volume_Up
 #WheelDown::Volume_Down
 
 
-;f.Ctrl + F2显示/隐藏“隐藏文件和文件夹”
+;f.Show/Hide hidden folders & files with "Ctrl + F2"
 
  ^F2::GoSub,CheckActiveWindow
   CheckActiveWindow:
@@ -261,7 +252,7 @@ WinTopToggle(w) {
   Return
 
 
-;g.Ctrl+F3显示/隐藏“已知文件后缀名”
+;g.Show/Hide known file extensions with "Ctrl + F3"
 
 ^F3::
 RegRead, HiddenFiles_Status, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, HideFileExt
@@ -276,38 +267,38 @@ Else PostMessage, 0x111, 28931,,, A
 Return
 
 
-; Press middle mouse button to move up a folder in Explorer
+; Press mouse wheel button to move up a folder in Explorer
 #IfWinActive, ahk_class CabinetWClass
 XButton1::Send !{Up} 
 #IfWinActive
 return
 
 
-;h.鼠标滚轮单击在资源管理器中返回上一级目录
+;h.Click mouse wheel button to back upper folder
 #IfWinActive, ahk_class CabinetWClass
 ~MButton::Send !{Up} 
 #IfWinActive
 return
 
 
-;i.清理回收站
+;i.Clean the Bin
 #Del::FileRecycleEmpty ; win + del
 return
 
 
-;j.设置数字小键盘为Always On
+;j.Set NumLock as Always On
 
 SetNumlockState, AlwaysOn
 return
 
 
-;k.暂时禁用ahk快捷键(Temporarily Suspend AutoHotkey)
+;k.Temporarily Suspend AutoHotkey
 
 !CapsLock::Suspend
 return
 
 
-;l.Win+L锁屏并快速灭屏
+;l.Lock screen with "Win+L" & turn off the scrren immidiately
 #L::
  {
  Sleep, 2500
@@ -317,23 +308,23 @@ return
  }
  return
 
-;锁屏（仅锁屏）
+;Just Lock the screen
 #X::
 DllCall("LockWorkStation")
 return
 
 
-;m. Ctrl F9 重新启动资源管理器（崩溃时）
+;m.Restart Explorer (in case of crash)
 ^F9::
     Runwait TASKKILL /F /IM explorer.exe
     Run explorer.exe
 return
 
 
-;n.Shift+`显示Active应用的下拉菜单
+;n.Display the drop-down menu of Active applications
 +`:: send {AppsKey}
 
-;o.Shift +  鼠标滚轮调节亮度
+;o."Shift + Mouse wheel" to adjust the brightness
 
 +WheelDown::
   AdjustScreenBrightness(-5)
@@ -370,7 +361,7 @@ AdjustScreenBrightness(step) {
 }
 
 
-;p.Win+Alt+N Clear all notifications
+;p.Clear all notifications (Please perform twice if it does'nt work)
 
 #!N::
     Send #n
@@ -379,9 +370,9 @@ AdjustScreenBrightness(step) {
     Send {Space} 
     Send {Esc}
 
-;q.Switch between Light & Dark Mode on Windows 11 using AHK
+;q.Switch between Light & Dark Mode on Windows 11
 
-;APPS ON WINDOWS 11 USE LIGHT/DARK MODE
+;IN THIS CASE, APPS ON WINDOWS 11 WILL USE LIGHT/DARK MODE
 ^#!A::
 ; read current theme
 RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "AppsUseLightTheme"
@@ -390,7 +381,7 @@ RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\
 RegWrite, REG_DWORD, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "AppsUseLightTheme", % 1 - CurrentTheme
 Return
 
-;SYSTEMS ON WINDOWS 11 USE LIGHT/DARK MODE
+;IN THIS CASE, SYSTEMS ON WINDOWS 11 WILL USE LIGHT/DARK MODE
 ^#!L::
 ; read current theme
 RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "SystemUsesLightTheme"
