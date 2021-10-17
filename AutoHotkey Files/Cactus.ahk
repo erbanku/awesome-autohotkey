@@ -1,12 +1,4 @@
-# Awesome Autohotkey Scripts & Commands
-#### Useful AutoHotkey scripts and command that can increase your productivity, and make your life more easier.
-
-## Contents
-
-1. [Cactus.ahk](AutoHotkey%20Files/Cactus.ahk)
-
-```ahk
-; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -406,4 +398,3 @@ RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\
 ; toggle between themes
 RegWrite, REG_DWORD, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "SystemUsesLightTheme", % 1 - CurrentTheme
 Return
-```
