@@ -408,3 +408,10 @@ RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\
 RegWrite, REG_DWORD, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "SystemUsesLightTheme", % 1 - CurrentTheme
 Return
 ```
+
+## License
+
+
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, [erbanku](https://github.com/erbanku) has waived all copyright and related or neighboring rights to this work.
