@@ -1,9 +1,11 @@
 # Awesome Autohotkey Scripts & Commands
-#### Useful AutoHotkey scripts and command that can increase your productivity, and make your life more easier.
+### Useful AutoHotkey scripts and command that can increase your productivity, and make your life more easier.
+
+#### *You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy.*
 
 ## Contents
 
-1. [Cactus.ahk](AutoHotkey%20Files/Cactus.ahk)
+### 1. [Cactus.ahk](AutoHotkey%20Files/Cactus.ahk)
 
 - ### Open folders
 ```ahk
