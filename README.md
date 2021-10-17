@@ -38,6 +38,7 @@
 
 - ### Open Applications
 ```ahk
+;2.Open Applications
 #F1::Run, "C:\DO NOT DELETE\Microsoft Store.lnk"
 #F2::Run, "C:\DO NOT DELETE\Calendar.lnk"
 #F3::Run, "C:\DO NOT DELETE\To Do.lnk"
@@ -95,6 +96,7 @@
 
 - ### Open Webpages in browser
 ```ahk
+;3.Open Webpages in browser
 ;Ctrl+Shift+LButton to open website copied to pastboard
 ^+LButton::Run, %clipboard%
 
@@ -141,7 +143,8 @@
 ```
 - ### 4.Text Replacement
 ```ahk
-;a.输入时间
+4.Text Replacement
+;a.Insert date-time
 
 ;Insert current time in standard US date-time format
 ::ustime::
@@ -175,6 +178,8 @@ You can customize it by yourself if you need
 
 - ### System Utilities
 ```ahk
+;5.System Utilities
+
 ;a.Hide/Show Desktop icons（Win+Z）
 
 #Z::
