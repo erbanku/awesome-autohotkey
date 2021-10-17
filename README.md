@@ -1,12 +1,15 @@
 # Awesome Autohotkey Scripts & Commands
+
 ### Useful AutoHotkey scripts and commands that can increase your productivity, and make your life easier.
-#### *You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy!*
+
+#### _You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy!_
 
 ## Contents
 
 ### 1. [Cactus.ahk](AutoHotkey%20Files/Cactus.ahk)
 
 - ### Open folders
+
 ```ahk
 ;1.Open folders
 
@@ -38,6 +41,7 @@
 ```
 
 - ### Open Applications
+
 ```ahk
 ;2.Open Applications
 #F1::Run, "C:\DO NOT DELETE\Microsoft Store.lnk"
@@ -96,6 +100,7 @@
 ```
 
 - ### Open Webpages in browser
+
 ```ahk
 ;3.Open Webpages in browser
 ;Ctrl+Shift+LButton to open website copied to pastboard
@@ -142,7 +147,9 @@
 
 ^#!P::Run, https://photos.google.com/?pli=1
 ```
-- ### 4.Text Replacement
+
+- ### Text Replacement
+
 ```ahk
 4.Text Replacement
 ;a.Insert date-time
@@ -164,7 +171,7 @@ return
 ;b.Quick personal text input
 /*
 Such as:    ::pip::pip install
-it can auto convert "pip" to "pip install" 
+it can auto convert "pip" to "pip install"
 You can customize it by yourself if you need
 */
 
@@ -178,6 +185,7 @@ You can customize it by yourself if you need
 ```
 
 - ### System Utilities
+
 ```ahk
 ;5.System Utilities
 
@@ -214,12 +222,12 @@ HideShowTaskbar(action) {
 
 ;d.Pin the Current Window on Top
 
-+Enter:: 
++Enter::
     WinGet ow, id, A
     WinTopToggle(ow)
     return
 WinTopToggle(w) {
- 
+
     WinGetTitle, oTitle, ahk_id %w%
     Winset, AlwaysOnTop, Toggle, ahk_id %w%
     WinGet, ExStyle, ExStyle, ahk_id %w%
@@ -230,7 +238,7 @@ WinTopToggle(w) {
     tooltip %oTitle% %oTop%
     SetTimer, RemoveToolTip, 5000
     return
- 
+
     RemoveToolTip:
     SetTimer, RemoveToolTip, Off
     ToolTip
@@ -254,16 +262,16 @@ WinTopToggle(w) {
     IfInString, WClasses, %Class%
       GoSub, Toggle_HiddenFiles_Display
   Return
-  
+
   Toggle_HiddenFiles_Display:
     RootKey = HKEY_CURRENT_USER
     SubKey  = Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
-  
+
     RegRead, HiddenFiles_Status, % RootKey, % SubKey, Hidden
-  
+
     if HiddenFiles_Status = 2
-        RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 1 
-    else 
+        RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 1
+    else
         RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 2
     PostMessage, 0x111, 41504,,, ahk_id %ID%
   Return
@@ -273,9 +281,9 @@ WinTopToggle(w) {
 
 ^F3::
 RegRead, HiddenFiles_Status, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, HideFileExt
-If HiddenFiles_Status = 1 
+If HiddenFiles_Status = 1
 RegWrite, REG_DWORD, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, HideFileExt, 0
-Else 
+Else
 RegWrite, REG_DWORD, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced, HideFileExt, 1
 WinGetClass, eh_Class,A
 If (eh_Class = "#32770" OR A_OSVersion = "WIN_VISTA")
@@ -286,14 +294,14 @@ Return
 
 ; Press mouse wheel button to move up a folder in Explorer
 #IfWinActive, ahk_class CabinetWClass
-XButton1::Send !{Up} 
+XButton1::Send !{Up}
 #IfWinActive
 return
 
 
 ;h.Click mouse wheel button to back upper folder
 #IfWinActive, ahk_class CabinetWClass
-~MButton::Send !{Up} 
+~MButton::Send !{Up}
 #IfWinActive
 return
 
@@ -346,11 +354,11 @@ return
 +WheelDown::
   AdjustScreenBrightness(-5)
   Return
-  
+
 +WheelUp::
   AdjustScreenBrightness(5)
   Return
-  
+
 AdjustScreenBrightness(step) {
     service := "winmgmts:{impersonationLevel=impersonate}!\\.\root\WMI"
     monitors := ComObjGet(service).ExecQuery("SELECT * FROM WmiMonitorBrightness WHERE Active=TRUE")
@@ -368,8 +376,8 @@ AdjustScreenBrightness(step) {
         return
     if (toSet < minBrightness)
         toSet := minBrightness
-        
-    
+
+
 
     for i in monMethods {
         i.WmiSetBrightness(1, toSet)
@@ -383,8 +391,8 @@ AdjustScreenBrightness(step) {
 #!N::
     Send #n
     Send +{Tab}
-    Send +{Tab} 
-    Send {Space} 
+    Send +{Tab}
+    Send {Space}
     Send {Esc}
 
 ;q.Switch between Light & Dark Mode on Windows 11
@@ -409,7 +417,6 @@ Return
 ```
 
 ## License
-
 
 [![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
