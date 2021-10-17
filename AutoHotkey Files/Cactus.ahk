@@ -1,15 +1,4 @@
-# Awesome Autohotkey Scripts & Commands
-### Useful AutoHotkey scripts and command that can increase your productivity, and make your life more easier.
-
-#### *You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy.*
-
-## Contents
-
-### 1. [Cactus.ahk](AutoHotkey%20Files/Cactus.ahk)
-
-- ### Open folders
-```ahk
-;1.Open folders
+﻿;1.Open folders
 
 ^#G::Run, C:\Users\%USERPROFILE%\Documents\GitHub
 
@@ -36,10 +25,8 @@
 
 ;TEMP DISABLED
 ;#M::Run, D:\OneDrive\onedrive files\musics\Windows 11 Music Library
-```
 
-- ### Open Applications
-```ahk
+
 ;2.Open Applications
 #F1::Run, "C:\DO NOT DELETE\Microsoft Store.lnk"
 #F2::Run, "C:\DO NOT DELETE\Calendar.lnk"
@@ -94,10 +81,8 @@
 !L::Run, "D:\OneDrive\OneDrive Files\LT Archives\2021-2022-1\LT Archives Grabber (2021-2022-1).exe.lnk"
 
 ^!#S::Run,"D:\OneDrive\Apps\AutoHotkey\System Timer.ahk"
-```
 
-- ### Open Webpages in browser
-```ahk
+
 ;3.Open Webpages in browser
 ;Ctrl+Shift+LButton to open website copied to pastboard
 ^+LButton::Run, %clipboard%
@@ -142,9 +127,8 @@
 ^#!W::Run, https://chrome.google.com/webstore/category/extensions
 
 ^#!P::Run, https://photos.google.com/?pli=1
-```
-- ### 4.Text Replacement
-```ahk
+
+
 4.Text Replacement
 ;a.Insert date-time
 
@@ -176,10 +160,8 @@ You can customize it by yourself if you need
 ::ghrw::gh  run watch
 ::cddg::cd Documents/GitHub
 ::pytoexe::auto-py-to-exe
-```
 
-- ### System Utilities
-```ahk
+
 ;5.System Utilities
 
 ;a.Hide/Show Desktop icons（Win+Z）
@@ -407,11 +389,3 @@ RegRead, CurrentTheme, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\
 ; toggle between themes
 RegWrite, REG_DWORD, % "HKCU\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", % "SystemUsesLightTheme", % 1 - CurrentTheme
 Return
-```
-
-## License
-
-
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-To the extent possible under law, [erbanku](https://github.com/erbanku) has waived all copyright and related or neighboring rights to this work.
