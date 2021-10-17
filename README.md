@@ -1,6 +1,6 @@
 # Awesome Autohotkey Scripts & Commands
 ### Useful AutoHotkey scripts and commands that can increase your productivity, and make your life easier.
-#### *You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy.*
+#### *You may need to do slight changes to make it yourselves. Feel free to contact me if you encounter any issues, enjoy!*
 
 ## Contents
 
